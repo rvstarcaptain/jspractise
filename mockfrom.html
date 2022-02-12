@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MockForm</title>
+</head>
+
+<body>
+    <h1>Application Form</h1>
+    <form method="form">
+        <div class=main-container>
+            <label for="name">Name:</label>
+            <input type="text" required id="name">
+            <br>
+            <label for="email">Email:</label>
+            <input type="text" required id="email">
+            <br>
+            <label for="phoneNumber">PhoneNumber:</label>
+            <input type="number" required id="phoneNumber">
+            <br>
+            <button onclick="clickme()">submit</button>
+        </div>
+        
+
+
+    </form>
+    <script>
+        function clickme() {
+            let Name = document.getElementById('name').value;
+            let Email = document.getElementById('email').value;
+            let phone = document.getElementById('phoneNumber').value;
+
+            console.log(window.alert(`${Name }  ${ Email }  ${ phone }`));
+            // console.log(window.alert(Email));
+            // console.log(window.alert(phone));
+
+        }
+    </script>
+</body>
+
+</html>

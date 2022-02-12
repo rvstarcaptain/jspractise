@@ -1,0 +1,139 @@
+1.css is a styling property that is used to (style,align) the element placed under the html body there are different types of css property and we can apply css to html in Three ways 
+a. inline css 
+b.external page
+c.writining css in same page
+2.selectors are basically css part which we use when we required to select a particular element from the body of the html
+Different type of selectors are there 
+a.Id—when we want to give style to a particular and a unique element of html we use id-“element” denoted by # in css
+b.Class—when we want to give styling to group of element we use this class property class=”group of element” denonted “.”
+3. css selector is basically inline selector which we use when we give styling to the particular element inside the tag 
+Like:- <p style=”color: red”>my color is red</p>
+4. z-index is used to steck the element when z index is used it forms a stack in element along with thechild element also get effected in z index and perform accordingly
+5  DESCRIBE BFC (BLOCK FORMATTING CONTEXT) AND HOW IT WORKS. 
+Ans :
+Bfc element shows the relation between parent to child or family 
+There are certain rules for creating block formatting element 
+First is that overflow shud be hidden 
+Second the margin shud be present 
+Third position shud be absolute
+6.HAVE YOU EVER USED A GRID SYSTEM, AND IF SO, WHAT DO YOU PREFER?
+When I use grid I don’t have to think about float and positioning as because grid works so efficiently to distribute the page in that manner where flex and positioning propert is not required.
+7. HAVE YOU USED OR IMPLEMENTED MEDIA QUERIES OR MOBILE SPECIFIC LAYOUTS/CSS? 
+Media queries are used to adjust the display of the screen as per the device as user is using in this role media syntax help a lot to a user
+Media queries can be used to check many things, such as:
+•	width and height of the viewport
+•	width and height of the device
+•	orientation (is the tablet/phone in landscape or portrait mode?)
+•	resolution
+8.EXPLAIN HOW A BROWSER DETERMINES WHAT ELEMENTS MATCH A CSS SELECTOR.   
+Ans: 
+There are key selector for specific element and that key selector indicates how the eliment will behave when that applies 
+Suppose:
+.class used in style it means all the group of class are seleceted
+When we aply this “*” to the css it selects all the elements of that particular class
+If we use # it applies to particular or unique element only 
+9. DESCRIBE PSEUDO-ELEMENTS AND DISCUSS WHAT THEY ARE USED FOR.  
+Ans:
+Pseudo element are used in :: double colon format
+When we want to add an element irrerespective of before or after to any element we use this property    
+
+10.EXPLAIN THE UDNERSTANDING OF BOX MODE?
+Ans:
+In css when we use box model it actually contain the whole element in a box and give layout and design
+Box has different parts mainly:
+Content= inside the content image and text appears
+Padding= it covers the text andimage inside a content and its transparent in nature
+Border= it gives border around the padded covered area
+Marging=it covers the border  from around.
+
+11. WHAT DOES * { BOX-SIZING: BORDER-BOX; } DO? WHAT ARE ITS ADVANTAGES?
+Ans:
+Box sizing:border box determines how the height and width of the element are calculated if padding or border are required or not
+We can easily manipulate the inner dimension of the content or the element by this property
+Box-sizing:border-box applied to the  all parts of the element padding:content:border
+Box-sizing:content-box applied to the content of the element.
+
+ 12. WHAT IS THE CSS DISPLAY PROPERTY AND CAN YOU GIVE A FEW EXAMPLES OF ITS USE?
+Ans:
+A css display property shows the display behaviour of the element 
+It is most property significant in html
+It has many type property like
+Display inline ,display block,inline - block,none,flex etc
+13. WHAT'S THE DIFFERENCE BETWEEN INLINE AND INLINE-BLOCK?
+Ans
+Display=Inline property do not have margins and cannot have width and height porperty
+Display = Inline block element has margins and padding both from top to bottom and also have width and height property they also don’t break the line so we can make element in horizontal manner.
+14. WHAT'S THE DIFFERENCE BETWEEN THE "NTH-OF-TYPE()" AND "NTH-CHILD()" SELECTORS?
+Ans:
+In nth of type the group of siblings is considered no matter how many type of elemenets created before that but if we give the number to that particular tag it will count its siblings only
+Example 
+<html>
+<head>
+<style> 
+p:nth-of-type(3) {
+  background: red;
+}
+</style>
+</head>                              THE ELEMENT WILL BE PARA 3RD 
+<body>
+<span>The first paragraph.</span>
+<span>The first paragraph.</span>
+<p>The first paragraph.</p>
+<p>The first paragraph.</p>
+<p>The first paragraph.</p>
+<p>The second paragraph.</p>
+<p>The third paragraph.</p>
+<p>The fourth paragraph.</p>
+
+</body>
+</html>
+In nth of child there is no sibling concept instead it counts head of the given property 
+EXAMPLE
+<html>
+<head>
+<style> 
+p:nth-child(3) {
+  background: red;
+}
+</style>
+</head>                              THE ELEMENT WILL BE PARA 1ST
+<body>
+<span>The first paragraph.</span>
+<span>The first paragraph.</span>
+<p>The first paragraph.</p>
+<p>The first paragraph.</p>
+<p>The first paragraph.</p>
+<p>The second paragraph.</p>
+<p>The third paragraph.</p>
+<p>The fourth paragraph.</p>
+
+</body>
+</html>
+15. WHAT'S THE DIFFERENCE BETWEEN A RELATIVE, FIXED, ABSOLUTE AND STATICALLY POSITIONED ELEMENT?
+Ans.
+Statical……………………….	Relative……………………..	Fixed…………………………..	Absolute…………………….
+
+Static positioned elements are not affected by the top, bottom, left, and right properties.
+This element is not positioned in any special way; it is always positioned according to the normal flow of the page.
+It is positioned relative to its normal position. 
+ top, right, bottom, and left properties of a relatively-positioned element will cause it to be adjusted away from its normal position. Other content will not be adjusted to fit into any gap left by the element.
+Is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. The top, right, bottom, and left properties are used to position the element.
+A fixed element does not leave a gap in the page where it would normally have been located.
+Notice the fixed element in the lower-right corner of the page. Here is the CSS that is used:
+
+It  is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed).
+However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling.
+Note: Absolute positioned elements are removed from the normal flow, and can overlap elements.
+
+16. WHAT EXISTING CSS FRAMEWORKS HAVE YOU USED LOCALLY, OR IN PRODUCTION? HOW WOULD YOU CHANGE/IMPROVE THEM?
+Ans:
+Most of the time css property are used in alignment of text positioning of element and content so I used this property in daily manner so I apply new technique to make less effort and smart work like using repeat function etc.
+17. have you used css grid?
+Ans:
+Yes I used css grid as this is the main property in any html web desgining.
+
+
+
+
+
+

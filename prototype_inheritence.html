@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h2>prototype</h2>
+    <script>
+        let animal ={};
+         animal.name = 'lion';
+         animal.power = 100;
+         console.log(animal);
+         animal.run=function(time){
+             console.log('animal is running')
+             this.power -= time;
+            
+         }
+         animal.eat=function(foodquantity){
+             console.log('animal is eating')
+             this.power += foodquantity;
+         }
+         animal.rest=function(time){
+             console.log('animal is taking rest')
+             this.power += time;
+         }
+         animal
+         animal.eat(20)
+         animal
+         animal.run(50)
+         animal
+         animal.rest(100)
+         console.log(animal);
+
+
+         //functional instantion
+        function animal2(name,power){
+            let animal2={};
+            animal2.name=name;
+            animal2.power = power;
+            animal2.run=function(time){
+             console.log('animal is running')
+             this.power -= time;
+            
+         }
+         animal2.eat=function(foodquantity){
+             console.log('animal is eating')
+             this.power += foodquantity;
+         }
+         animal2.rest=function(time){
+             console.log('animal is taking rest')
+             this.power += time;
+         }
+         animal2.run=function(time){
+             console.log('animal is running')
+             this.power -= time;
+            
+         }
+            return animal2;
+
+
+        }
+
+     //functional instantation shared method
+
+     const sharedmethod = {
+         eat:function(foodquantity){
+             console.log('animal is eating')
+             this.power += foodquantity;
+         },
+         rest:function(time){
+             console.log('animal is taking rest')
+             this.power += time;
+         },
+         run:function(time){
+             console.log('animal is running')
+             this.power -= time;
+            
+         },
+          }
+
+          function animali(name,power){
+           let animal2={};
+         animal2.name = name;
+         animal2.power = power;
+
+         animal2.eat = sharedmethod.eat;
+         animal2.run = sharedmethod.run;
+         animal2.rest = sharedmethod.rest;
+         return animal2;
+     } 
+      
+     let cat = animali('kitty',45)
+
+     //Object.creat deligates another object to  failed lookups
+     let  parent = {
+    name : "ac",
+    age : 29,
+    nationality : 'indian'
+      }
+    let child = Object.create(parent);
+    child.name = 'def';
+    child.age = 23;
+    console.log(child)
+//using deligates method of Object.create
+const sharedmethodiii = {
+         eat:function(foodquantity){
+             console.log('animal is eating')
+             this.power += foodquantity;
+         },
+         rest:function(time){
+             console.log('animal is taking rest')
+             this.power += time;
+         },
+         run:function(time){
+             console.log('animal is running')
+             this.power -= time;
+            
+         },
+          }
+
+        function animalii(name,power){
+         let animal3= Object.create(sharedmethodiii);
+         animal3.name = name;
+         animal3.power = power;
+
+         return animal3;
+     }
+      
+     let catty = animali('kitty',45)
+     
+     
+     function animalproto(name,power){
+         let animalII = Object.create(animalproto.prototype);
+         animalII.name=name;
+         animalII.power=power;
+         return animalII;
+     }
+      animalproto.prototype.eat = function (foodquantity){
+          console.log('animalproto is eating');
+          this.power += foodquantity;
+    };
+    animalproto.prototype.run = function (run){
+          console.log('animalproto is eating');
+          this.power -= run;
+    };
+    animalproto.prototype.eat = function (eat){
+          console.log('animalproto is eating');
+          this.power += eat;
+    };
+     let rat = new animalproto('jerrymia',25)
+
+     //class
+     class animalclass{
+         constructor(name,power){
+             this.name=name;
+             this.power=power;
+         }
+         eat(foodquantity){
+             console.log('class animal is eating')
+             this.power += foodquantity
+         };
+         run(time){
+             conosle.log('class animal is running')
+             this.power -= time;
+         };
+         rest(time){
+             console.log('class annimal is taking rest')
+             this.power += time;
+         }
+
+     }
+     let mousy = new animalclass('timtim',20)
+
+     //promise randomise function
+    //  function randomfunc() {
+    //         const twicecase = new Promise((resolve, reject) => {
+    //             const randomnumber = Math.round(Math.random() * 1000)
+    //             if (randomnumber % 2 == 0)
+    //                 resolve({ value: randomnumber, description: "even is good" });
+    //             else
+    //                 reject({ value: randomnumber, description: "odd is bad" });
+
+    //         });
+    //         return twicecase;
+    //     }
+    //     undefined
+    //     randomfunc().then(succeed => console.log("success", succeed), fail => console.log("failure", fail))
+    //     VM3693: 1 failure { value: 733, description: 'odd is bad' }
+    //             Promise {
+    //             <fulfilled>: undefined}
+    //                randomfunc().then(succeed => console.log("success",succeed),fail => console.log("failure",fail))
+    //             VM3698:1 success {value: 526, description: 'even is good'}
+
+     //
+       //serieas of promise
+       const waitforasec = () => new Promise (resolver => setTimeout(resolver,1000))
+       const waitforbsec = () => new Promise (resolve => setTimeout(resolve,2000))
+       const waitfor3rdsec = () => new Promise (resolve => setTimeout(resolve,3000))
+       waitforasec().then(x => console.log("hi"))
+        waitforbsec().then(x => console.log("by"))
+        waitfor3rdsec().then(x => console.log("hi=bye"))
+        waitforasec().then(x => {
+                console.log("hi");
+                waitforbsec().then(x => {
+                    console.log("by");
+                    waitfor3rdsec().then(x => console.log("hi=bye"))
+                })
+            })
+
+
+            Promise.all([waitforasec(), waitforbsec(), waitfor3rdsec()]).then(result => console.log(result))
+Promise
+ [undefined, undefined, undefined]
+
+    const waitfor4sec = () => new Promise((resolve, reject) => setTimeout(() => resolve("resolve"), 2500));
+    undefined
+    Promise.all([waitforasec(), waitforbsec(), waitfor3rdsec(), waitfor4sec()]).then(result => console.log(result)).catch(err => console.log(err))
+Promise {
+        <pending>}
+ (4) [undefined, undefined, undefined, 'resolve']
+
+ Promise.race([waitforasec(),waitforbsec(),waitfor3rdsec()]).then(result=>console.log(result))
+
+    //TRY CATCH 
+    function myfunc(){
+
+try{
+amyly
+} catch(err){
+console.log("error occured ",err)
+}
+console.log("let me execute");
+}
+undefined
+myfunc()
+VM4440:6 error occured  ReferenceError: amyly is not defined
+let me execute
+ASYNC await
+
+async function myawaitfunc(){
+    let serverreport = await fetch("https://jsonplaceholder.typicode.com/users");
+    let jsonfile = await serverreport.json()
+
+    console.log(jsonfile);
+}
+myawaitfunc()
+
+
+AWAIT ANF ASYNC WITH SUCCES AND failure
+
+async function myawaitfunc(){
+    try{
+    let serverreport = await fetch("https://jsonplaceholder.typicode.com/users");
+    let jsonfile = await serverreport.json()
+
+    console.log(jsonfile)
+}catch(err){console.log("error occured sorry!!!!",err)
+    return "failure";
+}
+  return "success";
+}
+
+undefined
+myawaitfunc()
+Promise {<pending>}
+VM5190:6 (10) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+myawaitfunc().then(result => console.log(result))
+Promise {<pending>}
+VM5190:6 (10) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+VM5293:1 success
+myawaitfunc().then(result => console.log(result))
+Promise {<pending>}
+VM5190:3 
+        
+       GET https://jsonplaceholder.typicode.com/users net::ERR_INTERNET_DISCONNECTED
+myawaitfunc @ VM5190:3
+(anonymous) @ VM5303:1
+VM5190:7 error occured sorry!!!! TypeError: Failed to fetch
+    at myawaitfunc (<anonymous>:3:30)
+    at <anonymous>:1:1
+VM5303:1 failure
+
+spread operator
+
+let a = [1,2,3,4]
+undefined
+let temp = a
+undefined
+temp
+(4) [1, 2, 3, 4]
+a
+(4) [1, 2, 3, 4]
+temp = [... a]
+(4) [1, 2, 3, 4]
+temp.push(7)
+5
+temp
+(5) [1, 2, 3, 4, 7]
+a
+(4) [1, 2, 3, 4]
+
+
+    </script>
+    </body>
+</html>

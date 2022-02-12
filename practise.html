@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #heading{
+                background-color: aqua;
+                /* box-sizing: border-box; */
+
+            }
+        </style>
+    </head>
+    <body>
+    <div class="container">
+        <h3 id="heading">----------</h3>
+        <h2 id='heading2'>Mouse status: Disabled</h2>
+        <button>Enable Mouse</button>
+        <!-- <h2>Enabled</h2> -->
+    </div>
+    <script>
+        let button2=document.getElementsByTagName('button')[0];
+        let switchbutton =true;
+        let flipbutton = () => (switchbutton = !switchbutton);
+        let entryremover  = () => { 
+                   heading.innerText ="mouseonme"
+                  };
+        let outremover =  () => { 
+                   heading.innerText ="mouse not on me!"
+                  };    
+                
+                               
+        button2.addEventListener('click',_=>{
+        if(switchbutton ){
+             button2.innerText='Disable Mouse';
+             let heading2= document.getElementById('heading2');
+                heading2.innerText=heading2.innerText.replace('Disabled','Enabled');
+              
+             let  heading=document.getElementById("heading");
+                  heading.addEventListener("mouseenter", entryremover);
+                  heading.addEventListener("mouseout", outremover); 
+                  flipbutton();
+                      
+               }    
+             
+            
+        else {
+
+             button2.innerText='Enable Mouse';
+            let heading2= document.getElementById('heading2');
+                heading2.innerText=heading2.innerText.replace('Enabled','Disabled');
+                heading.removeEventListener("mouseenter", entryremover);
+                heading.removeEventListener("mouseout", outremover);  
+                flipbutton();
+             
+               }
+               });
+    </script>
+    </body>
+</html>

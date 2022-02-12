@@ -1,0 +1,59 @@
+̵<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    .gridParent{
+        display: grid;
+        padding: 10px;
+        background-color: antiquewhite;
+        grid-template-columns: auto auto auto ;
+        grid-gap: 20px 30px;
+    }
+    .gridChild{
+        border: 1px solid black;
+        padding: 10px;
+        text-align: center;
+    }
+    .gridChild1{
+        padding: 50px;
+        text-align: center;
+        border: 1px solid black;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        background-color: cornflowerblue;
+    }
+    .gridChild2 {
+        padding: 50px;
+        border: 1px solid blueviolet;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        background-color: blueviolet;
+    }
+    .gridChild3 {
+        background-color:blanchedalmond;
+        padding: 50px;
+    }
+</style>
+<script src="index.js" defer></script>
+</head>
+<body>    
+    <div class="gridParent">        
+        <div class="gridChild1">
+                <div class="gridChild2">
+                    <div class="gridChild3" id="item3">Inner Most</div>
+                </div>
+        </div>                
+        <div class="gridChild">Item 4</div>
+        <div class="gridChild">Item 5</div>
+        <div class="gridChild">Item 6</div>
+        <div class="gridChild">Item 7</div>
+        <div class="gridChild">Item 8</div>
+        <div class="gridChild">Item 9</div>  
+    </div>
+    <h4 id="heading">Click on: </h4>
+    <!-- <button onclick="clickMe()">Change color & Text</button> -->    
+        <!-- <h4 id="heading">Mouse Status: Disabled</h4>         -->
+        <!-- <button id="button"> Enable Mouse </button>                           -->
+</body>
+</html>

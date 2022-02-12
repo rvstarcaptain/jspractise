@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		function showDetails (book) {
+			var bookauthor = book.getAttribute("data-book-author");
+			alert(book.innerHTML + " is written by "
+									+ bookauthor + ".");
+		}
+	</script>
+</head>
+
+<body>
+	<h1>Books</h1>
+	
+<p>Click on the book name to know author's name :</p>
+
+	
+	<ul>
+		<li onclick="showDetails(this)" id="gitanjali"
+				data-book-author="Rabindra Nath Tagore">
+			Gitanjali
+		</li>
+		
+		<li onclick="showDetails(this)" id="conquest_of_self"
+				data-book-author="Mahatma Gandhi">
+			Conquest of Self
+		</li>
+		
+		<li onclick="showDetails(this)" id="broken_wings"
+				data-book-author="Sarojini Naidu">
+			Broken Wings
+		</li>
+	</ul>
+    <p>...content before scripts...</p>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => alert("DOM ready!"));
+    </script>
+    
+    <script async src="https://javascript.info/article/script-async-defer/long.js"></script>
+    <script async src="https://javascript.info/article/script-async-defer/small.js"></script>
+    
+    <p>...content after scripts...</p>
+</body>
+</html>				

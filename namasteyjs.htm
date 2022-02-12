@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <button id="clickme1">like</button>
+    <button id="clickme2">dislike</button>
+    <h2 id="print">0</h2>
+</body>
+
+</html>
+
+
+
+
+
+<script>
+    
+
+        let count = 0;
+    document.getElementById("clickme1").addEventListener("click", () => {
+        count++;
+        document.getElementById('print').innerHTML = count;
+        if (count === 0) {
+            return count = 1;
+        }
+        
+    })
+
+
+
+    
+    document.getElementById("clickme2").addEventListener("click", () => {      
+        if (count === 0) {
+            return count = 0;
+        }
+        count--;
+        document.getElementById('print').innerHTML = count;
+        
+    })
+    
+
+    
+
+
+
+    // IN FUNCTIONAL EXPRESSION HOSITING DOES NOT WORK BUT IN FUNCTION STATMENT IT WORKS
+    a();
+    // b();
+    //FUNCTION STATEMENT also known as fucntion declaration
+    function a() {
+        console.log("a is called");
+    }
+    //FUNCTIONAL STATEMENT
+    var b = function () {
+
+        console.log("b is called");
+
+    }
+    b();
+    // anonymous funciton
+    // function ( ) {}
+    //doesnt have their own identity
+    //according to echma scripts function shud has a name
+    //it can be used as a value
+    var c = function () {//this is possble with function wihout name
+
+    }
+
+    //named function expression
+    var namedfncexpression = function named() {
+        //this is possible
+        //but named(); cannot be called will gv referce error
+        console.log("named cant be called")
+    }
+    namedfncexpression();
+    // named();this cant be called
+    //diff bet parrameters and arguments
+    function abcd(param1, param2) {//this is parameters
+        console.log(param1 + param2)//this is arguement
+    }
+    abcd(1, 2);
+    //first class function
+    //   ability to use likes values
+    //   can be passed inside a function
+    //   also knonw as first class citizen
+    //  function returns the function
+    //arrow function
+    //call back function?
+    //when fucntion are passed into another fucntion is called calledback function
+    //
+    function x(y) {
+        console.log("i am the first");
+        y();
+    }
+
+    x(function y() {
+        console.log('i am the second');
+    })
+</script>
