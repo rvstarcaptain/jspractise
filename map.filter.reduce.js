@@ -253,7 +253,7 @@
 
 
 
-=======
+
 // const users = [{firstname : "rahul" ,lastname: "verma",age :28},
               
 //                {firstname:"Donald",lastname:"trump",age :50},
@@ -495,7 +495,27 @@
 // ahead of timecompilation 
 // fir compiler to optimise for time based code and topoptmised 
 
-// execution => memory heap and call stack 
+// execution => memory heap and call stack
+// console.log("start");
+// setTimeout(function cb(){
+//     console.log("take me last")
+// },5000);
+// console.log("end");
+
+// let startdate = new Date().getTime();
+// let enddate = startdate;
+// while(enddate < startdate + 10000){
+//     enddate = new Date().getTime();
+    
+// }
+// console.log("take me before settime");
+//concurency model 
+//blocking main thread.
+
+
+
+
+for
 
 
  
@@ -508,4 +528,4 @@
 
 
 
->>>>>>> 8092d60295c4a5e7648d219823f0eabfe675bd05
+
