@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Reverse of an array 
 let arr = [1,2,3,4,5];
 arr.reverse();
@@ -578,3 +579,585 @@ string.padStart(20,"hello")
     
 */
 
+=======
+// Reverse of an array 
+let arr = [1,2,3,4,5];
+arr.reverse();
+let arr2=[];
+for(let i=0;i<arr.length;i++){
+    arr2.unshift(arr[i]);
+}
+// Join
+let arr = [1,2,3,4,5];
+'12345'
+let str = '';
+for(let i=0;i<arr.length;i++)
+    str = str+arr[i]
+// Concat
+let arr1 = [1,2,3], arr2 = [4,5,6]
+[1,2,3,4,5,6]
+arr1.concat(arr2);
+// Finding an element in the array 
+let num = 12;
+let arr = [1,2,3,4,5,11,15,17,18,31];
+let ajay=0;
+for(let i=0;i<arr.length;i++){
+    if(arr[i] === num){          
+        ajay = 1;
+    }    
+}
+(ajay==0)?console.log('Does not exist'):console.log("Exists");
+arr.includes(num)
+*/
+/*
+reverse push, pop, shift, unshift, join
+slice
+let arr = [1,2,3,4,5,6];
+arr.slice(0,3) // Last element is not considered
+let x = 2, y=4;
+let newArr = []
+for(let i=x;i<y;i++){
+    newArr.push(arr[i])
+}
+splice
+*/
+/*
+ Functions
+*/
+
+function sayHello(){    
+    for(let i=0;i<3;i++)
+        console.log("Hello",i);
+}
+sayHello();
+
+function sayHelloTo(name){    
+    console.log("Hello", name)
+}
+
+function sayHelloToPeople(people){    
+    for(let i=0;i<people.length;i++){
+        console.log("Hello", people[i],"!")        
+    }
+}
+
+/*
+Write a function which takes a number and prints it's table
+*/
+
+function printTable(number, till){
+    for(let i=0;i<till;i++){
+        console.log(number*(i+1));
+    }
+}
+
+function printTwoTables(number1, number2){
+
+}
+printTwoTables(2,3)
+function sayhi(name){
+    for(let i=0;i<=name.length;i++);{
+        console.log("hi", name[i]);
+    }
+}
+let x =sayhi ("rahul")
+
+function printtable(n1 , start, end ){
+    for(let i=start;i<=end;i++){
+        console.log(n1*(i))
+     }
+}
+prototypes and promises  
+
+https://in.linkedin.com/in/codeplayer
+
+/*
+object
+*/
+const kite ={
+    thread:"red",
+    p:"slight-bold",
+    s:"thin",
+    a:"style"
+};
+
+function december(v){
+    console.log("welcome new year" ,december)
+}
+const january = december
+//when assign function to a variable its called variable function
+//
+const mycar = {model:"bmw" , color: "red" , drive: function(){
+    console.log("my car is driving")
+}, }
+//sort arrays and basic object function
+arr = [1,5,6,4,3,9,7] 
+return console.log(arr.sort)
+mysortfunction =[3,1,2,4,8,6,7]
+mysortfunction.sort(function(a,b){
+    return(a-b)
+})
+[1, 2, 3, 4, 6, 7, 8]
+mysortfunction =[3,1,2,4,8,6,7]
+mysortfunction.sort(function(a,b){
+    return(a-b)
+})
+//[8, 7, 6, 4, 3, 2, 1]//
+dvelop arrays of an object 
+const cars = [{name:"a" , hp : 5}, {name:"b", hp:2},{name:"c", hp:8},{name:"f", hp:0},{name:"h", hp:4}]
+
+}]
+const cars = [{name:"a" , hp : 5}, {name:"b", hp:2}, {name:"c", hp:8},{name:"f", hp:0},{name:"h", hp:4}]
+cars.sort((a,b)=> {
+    return a.hp-b.hp
+})
+str1="a" , str2 ="t"
+str1.localcompare(str2)
+convert string into number by localcompare
+do while loop 
+function printthenumbersfrom1to100(){
+    let i=1;
+    do{
+        console.log(i);
+        i++;
+    }while(i<=100)
+}
+printthenumbersfrom1to100()
+reverse function by function 1 method
+let mirror = (a) => a.split('').reverse().join('')
+undefined
+mirror("welcome to this javascript")
+'tpircsavaj siht ot emoclew'
+
+reverse funciton by function-2 method
+let mirror = (a) => a.split('').reverse().join('')
+function mirrormaze(mirrorme,reversethis){
+    console.log("reverse of " , reversethis , "is", mirrorme(reversethis))
+}
+mirrormaze(mirror,"rahul")
+reverse of ra
+
+28/12/2021 [ARRAY ITERATIVE METHOD]
+function of an object are caled method
+arr={
+    car:"my-car",
+    drive:function(){
+        console.log("vroom")
+    }
+}
+let arr =[{name:"e",hp:4},{name:"a",hp:14},{name:"c",hp:24},{name:"d",hp:34},]
+arr.sort((a,b)  => {
+    return a.name.localecompare(b.name)
+})
+let arr =[1,2,3,4,5,6,7,8]
+for(let i=0;i<arr.length;i++){
+    if(arr[i]%2==1)
+        console.log(arr[i])
+
+1
+3
+5
+7
+1.FOREACH METHOD
+array =[1,2,3,4,5,6,7,8,9]
+(9) [1, 2, 3, 4, 5, 6, 7, 8, 9]
+array.forEach((elem,index) =>{
+    if(elem%2==1)
+        console.log(elem)
+})
+VM940:3 1
+VM940:3 3
+VM940:3 5
+VM940:3 7
+VM940:3 9
+array.forEach((elem,index) =>{
+    if(elem%2==1)
+        console.log(elem,"is at index",index)
+})
+for prtinng the odd numbers and sum of al odd number
+let count =0;
+array.forEach((elem,index) => {
+    if(elem%2==1){
+        count=count+elem;
+            console.log(elem,index)
+}
+})
+VM1466:5 1 0
+VM1466:5 3 2
+VM1466:5 5 4
+VM1466:5 7 6
+VM1466:5 9 8
+undefined
+count
+25    
+
+CALL BACK IS A FUNCTION USE TIO GIVE ARGUEMENT TO ANOTHER FUNCTION WHIHC CALLED LATER
+let newele = [];
+
+arr.forEach((element,index) => {
+    if(element%2==1){
+        newele.push(element)
+    }
+})
+
+2.FILTER METHOD RETURN SOMETHING WEARAS FOR EACH DOESNT RETURN
+let sumodds=0;
+arr.filter((ele,ind)  =>{
+    if(ele%2==1)
+        return sumodds=sumodds+ele;
+} )
+(5) [1, 3, 5, 7, 9]
+sumodds
+25
+
+const audi =[{name:"a",hp:2},{name:"c",hp:1},{name:"v",hp:0},{name:"w",hp:4},{name:"d",hp:22},{name:"h",hp:12},{name:"d",hp:42},]
+undefined
+audi.filter((cars) => {
+    if(cars.hp>=2)
+        return true;
+})
+3.MAP METHOD
+TO RUN OVER EACH ARRAY AND TRANSFROM IT TO SOMETHING ELSE
+4.find method
+const audi =[{name:"a",hp:2},{name:"c",hp:1},{name:"v",hp:0},{name:"w",hp:4},{name:"d",hp:22},{name:"h",hp:12},{name:"d",hp:42},]
+let audi = audi.find(ele => ele.hp===0 )
+{name: 'v', hp: 0}
+5.findIndex
+const audi =[{name:"a",hp:2},{name:"c",hp:1},{name:"v",hp:0},{name:"w",hp:4},{name:"d",hp:22},{name:"h",hp:12},{name:"d",hp:42},]
+let audi = audi.find(ele => ele.hp===0 )
+3
+6.some 
+returns true if that condition is satisfied
+const audi =[{name:"a",hp:2},{name:"c",hp:1},{name:"v",hp:0},{name:"w",hp:4},{name:"d",hp:22},{name:"h",hp:12},{name:"d",hp:42},]
+undefined
+audi.some(ele => ele.hp>4)
+7.every
+const audi =[{name:"a",hp:2},{name:"c",hp:1},{name:"v",hp:0},{name:"w",hp:4},{name:"d",hp:22},{name:"h",hp:12},{name:"d",hp:42},]
+undefined
+audi.every(ele => ele.hp>4)
+false
+8.reduce method
+a.accumulation 
+b.element 
+c.index
+d.array
+arr.reduce((acc,ele) => { 
+    console.log("for the index",ele)
+    return acc+ele;
+ },0)
+VM1961:2 for the index 1
+VM1961:2 for the index 2
+VM1961:2 for the index 3
+VM1961:2 for the index 4
+10
+arr.reduce((acc,oddnumbers) =>{
+    if(oddnumbers%2==1)
+        acc.push(oddnumbers);
+    return acc;
+},[])
+(5) [1, 3, 5, 7, 9]
+01/01/2022
+closures
+function addnumbertonumber(num1){
+    return function (num2){
+        return num1+num2;
+}
+}
+const add3tonumber = addnumbertonumber(3)
+add3tonumber(3)
+
+A closure is the combination of function which is bundeled together with its variable
+ 
+const callingfunction = (num1) => (num2) => num1+num2;
+const add1 = callingfunction(2)
+
+const add2 = callingfunction(8)
+const add3 = callingfunction(99)
+
+add1(8)
+10
+add2(2)
+10
+add3(-89)
+10
+
+a closure is a function which is enclosed inside another function having ecxess to its lexical enviroment.
+
+/*MATH FUNCTIOM
+math has constans/property 
+math has  behvaiours/function 
+1.math.round (round off to closet numbers)
+2.math.ceil  The Math.ceil () function in JavaScript is used to round the number passed as parameter to its nearest integer in Upward direction of rounding i.e towards the greater value.
+3.math.floor (take )
+4.Math.trunc( eliminatedecimal part)
+5.Math.sign (gives -1/1 depending upon -ve/+ve number)
+6.Math.pow (to riase thenumber bby power)
+7.Math.sqrt (aquare root of the number)
+8.Math.abs (symbol of positivity)
+9.Math.min(takes arguement and retrun the min value) 
+10.Math.max(takes argu.. and take out max value)
+11.Math.random(takes value between 0 to 1)
+11(a).function valuebetweenab (a,b){
+    return Math.floor(Math.random()*(b-a)+a);
+}
+valuebetweenab(10,15)
+10
+12.
+*/
+/*
+DATE
+new Date
+epoc value date
+date.now
+function memoizedAddTo256(){
+    var cache = {};
+
+    return function(num){
+        if(num in cache){
+        console.log("cached value");
+        return cache[num]
+
+        }
+        else{
+        cache[num] = num + 256;
+        return cache[num];
+        }
+    }
+}
+
+var memoizedFunc = memoizedAddTo256();
+
+memoizedFunc(20); // Normal return
+memoizedFunc(20); // Cached return
+
+function scope (var)
+function varscope(name){
+    if (name.length>5){
+        var namelength = name.length;
+        console.log('total number of length',namelength)
+    }
+        console.log(namelength);
+}
+undefined
+varscope('rahulverma')
+VM785:4 total number of length 10
+VM785:6 10
+
+DATES
+epoctime stamp
+date.now()
+new date()
+t = new Date
+t.toDateString
+t.toISOString 
+get method 
+const days =["Sunday","Monday","Tuesday","Wedensday","Thursday","Frida
+day"]
+const Months= ["January","February","March","April","May","June","July","August","September","October","November","December"]
+date+" " + Months[t.getMonth()]+" "+days[t.getDay()]+" "+t.getFullYear()
+'8 January Saturday 2022'
+SET METHOD
+setfullYear()
+t= new Date()
+Sat Jan 08 2022 14:37:44 GMT+0530 (India Standard Time)
+t.setFullYear(1993)
+726484064606
+t
+Fri Jan 08 1993 14:37:44 GMT+0530 (India Standard Time)
+
+function givethenextdate(date){
+    let currentdate = date.getTime()+24*3600000;
+    let tommdate = new Date(currentdate)
+    let year = tommdate.getFullyear();
+    let month = (tommdate.getMonth()+1);
+    let day = tommdate.getDay();
+    return year+"-"+month+"-"+day 
+
+    const nextday = new Date();
+}
+function nextdate(date){
+    let nextday = date.getTime() + 24*3600000;
+    let tommdate = new Date (nextday)
+    return tommdate;
+    }
+    const newdate = new Date();
+    
+    let car = {color:"red",type:"sedan",model:"bmw",engine:"2000hp"}
+    JSON.stringify(car)
+'{"color":"red","type":"sedan","model":"bmw","engine":"2000hp"}'
+document.getElementById("gridChild10").innerText = JSON.stringify(car)
+'{"color":"red","type":"sedan","model":"bmw","engine":"2000hp"}'
+
+second method 
+let updatedcar => Object.entries(car).map(el => el[0]+":"+el[1]).join(',')
+
+CONSTRUCTOR FUNCTION
+
+function creatcar(1,2,3){
+    return{color,size,engine};
+}
+
+QUESTION
+function createcar(color,size,model,engine,breaks,waterpump){
+    return{color,
+           size,
+           model,
+           engine,
+waterpump,
+breaks,
+drive: () => console.log("driving"),
+horn:() => console.log("peep-peep")
+    
+    };
+}
+undefined
+let car3 = createcar('red',200,"bmw",1000,  ()=>console.log("breaksapplied"), ()=>console.log(showered))
+undefined
+car3
+{color: 'red', size: 200, model: 'bmw', engine: 1000, waterpump: ƒ, …}
+breaks: ()=>console.log("breaksapplied")
+color: "red"
+drive: () => console.log("driving")
+engine: 1000
+horn: () => console.log("peep-peep")
+model: "bmw"
+size: 200
+waterpump: ()=>console.log(showered)
+[[Prototype]]: Object
+
+BY THE METHOD OF this
+function thiscar(color,size,model,engine,waterpump,breaks){
+    this.color;
+    this.size;
+    this.model;
+    this.engine;
+    this.waterpump;
+    this.breaks
+    }
+    new thiscar('black',10,'bmw',1000)
+
+ FUEL WITH THIS FUNCTION
+ const fuelcar ={
+    color:"red",
+    fuel:10,
+model:"bmw",
+drive(){
+  this.fuel= this.fuel-1    
+    }
+}
+undefined
+fuelcar.drive()
+undefined
+fuelcar
+{color: 'red', fuel: 9, model: 'bmw', drive: ƒ}
+fuelcar.drive()
+undefined
+fuelcar
+{color: 'red', fuel: 8, model: 'bmw', drive: ƒ}   
+
+GETTER AND SETTER
+
+const human = {
+    fistname:"rahul",
+    lastname:"verma",
+    get fullname (){
+        return  this.fistname+" "+this.lastname
+    }
+    }
+    undefined
+    human.fullname
+    'rahul verma'
+
+    GET NAME IS NT A FUNCTION BUT ACT AS A FUNCTION
+    SET IS FUNCTION WHERE WE REASIGN THE NEW value
+
+    const mycar ={
+        name: "tata",
+        model:"top",
+        size:"big",
+        type:"a",
+        
+        set newcar(assigncar){
+            this.type = assigncar
+        },
+        };
+        
+        
+        undefined
+        mycar.newcar = "b"
+        'b'
+        mycar
+        {name: 'tata', model: 'top', size: 'big', type: 'b'}  
+
+STRING LENGTH,SLICE,substr,substring,replace
+slice and substring are similar but substring does not take negtve value
+substr takes length of index.
+replace can replace string 
+replaceall
+string.replace("","-")
+'am-i the only one here'
+stirng.replaceAll("","-")
+'am-i-the-only-one-here'
+string.toUpperCase()
+function firstcase(name){
+    for(let i=0;i<=name.length;i++);
+     console.log(name.substring(0,1).toLocaleUpperCase()+""+name.substring(1).toLowerCase())
+   };
+   function firstcase(name){console.log(name.substring(0,1).toLocaleUpperCase()+""+name.substring(1).toLowerCase())
+};
+
+concat
+let myname = "abcd"
+let yourname ="efghjk"
+undefined
+myname.concat(yourname)
+'abcdefghjk'
+myname.concat("",yourname)
+'abcdefghjk'
+myname.concat(" ",yourname)
+'abcd efghjk'
+
+
+trim to remove white spaces around the semi colons
+a = " welcome to the world    " 
+' welcome to the world    '
+a.trim()
+'welcome to the world'
+
+pad start 
+pad end 
+text ="5"
+'5'
+text.padStart(4,0)
+'0005'
+text.padEnd(3,0)
+'500'
+string.padEnd(10,"h")
+'xyzhhhhhhh'
+string.padStart(20,"hello")
+'hellohellohellohexyz
+    CharAt method
+    text ="abcdsef"
+    text.CharAt(0)
+    'a'
+    function factorialofnumber(n) {
+        if( (n==1) || (n==0))
+            return = 1;
+        else
+            return (n*factorialofnumber(n-1));
+    }
+
+    function numberofdiv(typenumber){
+        for(i=0;i<typenumber;i++){
+        let parentdiv = document.querySelector(".gridParent");
+        let newdiv = document.createElement("div");
+        newdiv.innerText="item "+(i+1);
+        newdiv.setAttribute("class","gridChild");
+        parentdiv.appendChild(newdiv)
+        }
+    }
+    
+    
+*/
+
+>>>>>>> 8092d60295c4a5e7648d219823f0eabfe675bd05
