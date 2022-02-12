@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 // const users = [{firstname : "rahul" ,lastname: "verma",age :28},
               
 //                {firstname:"Donald",lastname:"trump",age :50},
