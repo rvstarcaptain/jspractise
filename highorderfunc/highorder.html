@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <h1>High order function </h1>
+</body>
+
+<script>
+    
+
+// function area(radius) {
+//     const output = [];
+//     for (let i = 0; i < radius.length; i++) {
+//         output.push(Math.PI * radius[i] * radius[i]);
+//     }
+//     return output;
+
+// }
+// console.log(area(radius));
+// function circumference(radius) {
+//     const output = [];
+//     for (let i = 0; i < radius.length; i++) {
+//         output.push(2*Math.PI * radius[i]);
+//     }
+//     return output;
+
+// }
+// console.log(circumference(radius));
+
+// function diameter(radius) {
+//     const output = [];
+//     for (let i = 0; i < radius.length; i++) {
+//         output.push(2* radius[i]);
+//     }
+//     return output;
+
+// }
+// console.log(diameter(radius));
+//WITH MORE OPTIMISE
+// let radius = [1, 3, 4, 5, 6, 7, 8];
+// const area  = function (radius){
+//     return Math.PI* radius * radius ;
+// }
+// const circumference = function(radius){
+//     return 2 * Math.PI * radius;
+// }
+// const diameter = function(radius){
+//     return 2 * radius;
+// }
+// const calculate = function(radius, logic) {
+//     let output = [];
+//     for (let i = 0; i < radius.length; i++) {
+//         output.push(logic(radius[i]));
+        
+//     }
+//     return output;
+// }    
+//     console.log(calculate(radius, area));
+//     console.log(calculate(radius, circumference));
+//     console.log(calculate(radius, diameter));
+
+//WITH MAP FUNCTION
+// let arr = [4,5,6,7,8,9];
+// let area = function(arr){
+//     return Math.PI * arr*arr;
+// }
+// let circumference = function(arr){
+//     return 2 * Math.PI *arr;
+// }
+
+// let diameter = function(arr){
+//     return 2*arr;
+// }
+// console.log(arr.map(area));
+// console.log(arr.map(circumference));
+// console.log(arr.map(diameter));
+// function x() {
+//     console.log("hi i am rahul");
+// }
+// function y(x) {
+//     x();
+
+// function checkme(val){
+//     var answer = "";
+//     switch(val){
+//         case 1: answer = "grade= A";
+//         break;
+//         case 2: answer = "grade = B";
+//         break;
+//         case 3: answer = "grade = C";
+//         break;
+//         case 4: answer = "grade = D";
+//         break;
+//         default: answer = " ARE YOU ANIBBA";
+//         break;
+//     }
+//     return answer;
+// }
+
+let name = {
+    firstname : "rahul",
+    lastname : "verma"
+}
+    printfullname = function(hometown){
+        console.log(this.firstname +" "+ this.lastname+" from " + ""+hometown);
+    }
+
+printfullname.call(name);
+let name2 = {
+    firstname:"sachin",
+    lastname:"tendulkar",
+
+}
+// function borrowing -->call
+// printfullname.call(name2);
+//another method by constructor-->
+function commonvar(name,title,hometown){
+    this.firstname = name;
+    this.lastname = title;
+    this.hometown=hometown;
+    console.log(name+ " "+ title+" "+" from " + "  " + hometown);
+}
+commonvar("rahul","verma","kolkata");
+commonvar("neha","dubey","mp");
+commonvar("kuldeep","triparthi","non");
+commonvar("sk","azaharuddin","wb");
+//apply method here we usee argument in array
+printfullname.apply(name2,["maharastra"]);
+
+//bind-> it returns a method which will be called later
+ let returnbindfunc =  printfullname.bind(name2,"maharashtra","mumbai");
+returnbindfunc();
+
+
+</script>
+
+</html>
