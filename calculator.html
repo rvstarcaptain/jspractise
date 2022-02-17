@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>calculator</title>
+        <style>
+        .main-container{
+            text-align: center;
+            display: inline-block;
+            border: 2px solid black;
+            justify-content: center;
+            width: 250px;
+            height: 450px;
+            border-radius: 30px;
+           
+
+        }
+        table{
+            margin: auto;
+
+        }
+        input{
+            font-size: auto;
+            border: 4px solid rgb(4, 122, 116);
+            border-radius: 12px;
+            padding: 8px;
+            margin: 13px;
+
+        }
+        button{
+            font-size: 30px;
+            background-color: rgb(21, 228, 159);
+            width: 45px;
+            height: 45px;
+            border-radius: 20px;
+            box-shadow: 1px 2px 15px 1px  rgb(145, 21, 216);
+        }
+        div{
+            background-image: linear-gradient(to right top, blue,green,yellow,pink);
+        }
+        </style>
+    </head>
+    <body>
+        <div class="main-container">
+            <h1 id="heaidng">casio</h1>
+            <input type="numbers" name="screen" id="screen">
+            <table>
+                <tr>
+                    <td>
+                        <button id="no7">7</button>
+                        <button id="no8">8</button>
+                        <button id="no8">9</button>
+                        <button id="no8">C</button>
+                    </td>
+                </tr>  
+                
+                <tr>
+                    <td>                   
+                        <button id="no8">4</button>
+                        <button id="no8">5</button>
+                        <button id="no8">6</button>
+                        <button id="no8">-</button>  
+                       
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button id="no8">1</button>
+                        <button id="no8">2</button>
+                        <button id="no8">3</button>
+                        <button id="no8">+</button>
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button id="dot"> . </button>
+                        <button id="quotent">/</button>
+                        <button id="remainder">%</button>
+                        <button id="equal">=</button>
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button id="">€</button>
+                        <button id="">&</button>
+                        <button id="multiply">X</button>
+                        <button id="">@</button>
+                        
+                    </td>
+                </tr>
+                
+            </table>
+
+        </div>
+        <script src="Cal.js">
+        </script>
+
+    </body>
+</html>
