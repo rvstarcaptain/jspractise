@@ -3,10 +3,143 @@
 
 <head>
     <title>Responsive Grid CV </title>
-    <link rel="stylesheet" href="C:\Users\verma\resumegrid.css">
+    <!-- <link rel="stylesheet" href="C:\Users\verma\resumegrid.css"> -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <style>
+    
+     *{
+        margin: 0%;
+        padding: 0%;
+    }
+    body{
+        background-color: cadetblue;
+    }
+    .main-content{
+        display:grid;
+        grid-template-columns: 300px 700px;
+        min-height: 1000px;
+        width: 90%;
+        margin:20px auto;
+    }
+    .left-section{
+        grid-column: span 1;
+        background-color: rgb(15, 146, 103);
+        
+    
+    }
+    .right-section{
+        grid-column: span 1 / span 2;
+        background-color: rgb(218, 204, 186);
+    }
+    .left-content{
+        padding: 1rem;
+    
+    }
+    .profile-image{
+        display: block;
+        margin: auto;
+        border: 5px solid white;
+        border-radius: 30%;
+        width: 60%;
+        }
+    img{
+        border-radius: 30%;
+    }
+    .name{
+        font-size: 1.2rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.02px ;
+        text-align: center;
+        padding: 0.8rem;
+    }
+    .designation{
+        font-size: 1rem;
+        text-align: center;
+        text-transform: uppercase;
+        padding-bottom: 0.5rem;
+    }
+    .description{
+        font-size: 0.75rem;
+        text-align: center;
+        padding: 1rem;
+    }
+    .social-media{
+        display: flex;
+        justify-content: space-evenly;
+        list-style: none;
+    }
+    .personal-details ul li{
+        list-style: none;
+        position: relative;
+        margin-bottom: 30px;
+        
+    }
+    .skills{
+        font-size: 0.65rem;
+        align-items: center;
+        text-transform: uppercase;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+    }
+    .skill-name{
+        font-size: 0.65rem;
+        font-weight: 0.65rem;
+        align-items: left;
+        padding-bottom: 0.5rem;
+    }
+    .skill-title{
+        text-align: center;
+    }
+    .skill-content{
+        font-size: 0.65rem;
+        font-weight: 0.65rem;
+        align-items: left;
+        padding-bottom: 0.5rem;
+    }
+    .progress-bar{
+        border: 1px solid white;
+        height: 4px;
+        margin-bottom: 40px;
+    }
+    .right-main-content{
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        padding-right: 3rem;
+        padding-left: 3rem;
+    }
+    .right-title{
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        font-weight: 700;
+        padding: 0.5rem;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+    .about-me{
+        
+        justify-content: right;
+    }
+    .college{
+        display: flex;
+        flex-direction: flex-end;
+        justify-content: end;
+        text-align: end;
+        padding-top: 10px;
+    }
+    @media (max-width: 673px){
+        .main-content {
+            grid-template-columns: repeat(1, 1fr);
+            width: 90%;
+            min-height: 1000px;
+        }
+    }
+    </style>
+    
 </head>
 
 <body>
